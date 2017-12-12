@@ -842,10 +842,6 @@ Below is the complete list of available options that can be used to customize yo
 | `GITLAB_NOTIFY_ON_BROKEN_BUILDS` | Enable or disable broken build notification emails. Defaults to `true` |
 | `GITLAB_NOTIFY_PUSHER` | Add pusher to recipients list of broken build notification emails. Defaults to `false` |
 | `GITLAB_REPOS_DIR` | The git repositories folder in the container. Defaults to `/home/git/data/repositories` |
-| `GITLAB_REPOSITORIES_STORAGES_DEFAULT_FAILURE_COUNT_THRESHOLD` | Sets the number of failures before stopping attempts. Defaults to `22`. |
-| `GITLAB_REPOSITORIES_STORAGES_DEFAULT_FAILURE_WAIT_TIME` | Sets the time in seconds after an access failure before allowing access again. Defaults to `30`. |
-| `GITLAB_REPOSITORIES_STORAGES_DEFAULT_FAILURE_RESET_TIME` | Sets the time in seconds to expire failures. Defaults to `1800`. |
-| `GITLAB_REPOSITORIES_STORAGES_DEFAULT_STORAGE_TIMEOUT` | Sets the time in seconds to wait before aborting a storage access attempt. Defaults to `5`. |
 | `GITLAB_BACKUP_DIR` | The backup folder in the container. Defaults to `/home/git/data/backups` |
 | `GITLAB_BUILDS_DIR` | The build traces directory. Defaults to `/home/git/data/builds` |
 | `GITLAB_DOWNLOADS_DIR` | The repository downloads directory. A temporary zip is created in this directory when users click **Download Zip** on a project. Defaults to `/home/git/data/tmp/downloads`. |
@@ -859,7 +855,9 @@ Below is the complete list of available options that can be used to customize yo
 | `GITLAB_MATTERMOST_URL` | Sets Mattermost URL. Defaults to `https://mattermost.example.com`. |
 | `GITLAB_BACKUP_SCHEDULE` | Setup cron job to automatic backups. Possible values `disable`, `daily`, `weekly` or `monthly`. Disabled by default |
 | `GITLAB_BACKUP_EXPIRY` | Configure how long (in seconds) to keep backups before they are deleted. By default when automated backups are disabled backups are kept forever (0 seconds), else the backups expire in 7 days (604800 seconds). |
-| `GITLAB_BACKUP_PG_SCHEMA` | Specify the PostgreSQL schema for the backups. No defaults, which means that all schemas will be backed up. see #524 |
+| `GITLAB_BACKUP_PG_SCHEMA` | Specify the PostgreSQL schema for the 
+Шарды — это секретный ингридиент в рецепте горизонтального масштабирования. Они просто работают.
+backups. No defaults, which means that all schemas will be backed up. see #524 |
 | `GITLAB_BACKUP_ARCHIVE_PERMISSIONS` | Sets the permissions of the backup archives. Defaults to `0600`. [See](http://doc.gitlab.com/ce/raketasks/backup_restore.html#backup-archive-permissions) |
 | `GITLAB_BACKUP_TIME` | Set a time for the automatic backups in `HH:MM` format. Defaults to `04:00`. |
 | `GITLAB_BACKUP_SKIP` | Specified sections are skipped by the backups. Defaults to empty, i.e. `lfs,uploads`. [See](http://doc.gitlab.com/ce/raketasks/backup_restore.html#create-a-backup-of-the-gitlab-system) |
